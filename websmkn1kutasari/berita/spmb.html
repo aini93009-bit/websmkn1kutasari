@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Mengenal SPMB Jateng 2026 - SMK Negeri 1 Kutasari
+    </title>
+
+    <link rel="stylesheet" href="../css.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================
+           HALAMAN ARTIKEL SPMB
+        ========================================= */
+
+        .spmb-page {
+            background: #f5f6f7;
+            padding: 70px 20px 90px;
+        }
+
+
+        .spmb-container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           HEADER ARTIKEL
+        ========================================= */
+
+        .spmb-header {
+            background: #ffffff;
+            padding: 45px 55px 35px;
+            border-radius: 12px 12px 0 0;
+        }
+
+
+        .spmb-category {
+            display: inline-block;
+
+            color: #008b68;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+
+        .spmb-header h1 {
+            margin: 0 0 18px;
+
+            color: #123f34;
+
+            font-size: 42px;
+            line-height: 1.2;
+
+            font-weight: 700;
+        }
+
+
+        .spmb-meta {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        .spmb-meta i {
+            color: #008b68;
+        }
+
+
+        /* =========================================
+           FOTO UTAMA
+        ========================================= */
+
+        .spmb-main-image {
+            background: #fff;
+            padding: 0 55px 40px;
+        }
+
+
+        .spmb-main-image img {
+            width: 100%;
+
+            max-height: 650px;
+
+            object-fit: contain;
+
+            display: block;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================================
+           ISI ARTIKEL
+        ========================================= */
+
+        .spmb-content {
+            background: #ffffff;
+
+            padding: 10px 55px 55px;
+
+            border-radius: 0 0 12px 12px;
+        }
+
+
+        .spmb-content p {
+            color: #444;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin: 0 0 24px;
+        }
+
+
+        .spmb-content h2 {
+            color: #064c3b;
+
+            font-size: 28px;
+
+            line-height: 1.3;
+
+            margin: 42px 0 18px;
+
+            padding-left: 15px;
+
+            border-left: 4px solid #008b68;
+        }
+
+
+        .spmb-content h3 {
+            color: #064c3b;
+
+            font-size: 22px;
+
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           LIST
+        ========================================= */
+
+        .spmb-content ul {
+            margin: 0 0 28px;
+
+            padding-left: 25px;
+        }
+
+
+        .spmb-content li {
+            color: #444;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================================
+           GAMBAR DI DALAM ARTIKEL
+        ========================================= */
+
+        .spmb-article-image {
+            margin: 35px 0;
+
+            text-align: center;
+        }
+
+
+        .spmb-article-image img {
+            width: 100%;
+
+            max-height: 650px;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+
+            display: block;
+
+            margin: auto;
+        }
+
+
+        .spmb-caption {
+            color: #777;
+
+            font-size: 13px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================================
+           KOTAK INFORMASI
+        ========================================= */
+
+        .spmb-info {
+            background: #f1f8f5;
+
+            border-left: 4px solid #008b68;
+
+            padding: 22px 25px;
+
+            margin: 30px 0;
+
+            border-radius: 5px;
+        }
+
+
+        .spmb-info strong {
+            color: #064c3b;
+
+            display: block;
+
+            margin-bottom: 7px;
+        }
+
+
+        .spmb-info p {
+            margin: 0;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           TOMBOL KEMBALI
+        ========================================= */
+
+        .spmb-back {
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+
+        .spmb-back a {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 13px 25px;
+
+            background: #008b68;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        .spmb-back a:hover {
+            background: #006b51;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .spmb-page {
+                padding: 35px 12px 60px;
+            }
+
+
+            .spmb-header {
+                padding: 30px 22px 25px;
+            }
+
+
+            .spmb-header h1 {
+                font-size: 30px;
+            }
+
+
+            .spmb-meta {
+                flex-wrap: wrap;
+            }
+
+
+            .spmb-main-image {
+                padding: 0 22px 25px;
+            }
+
+
+            .spmb-content {
+                padding: 5px 22px 35px;
+            }
+
+
+            .spmb-content p {
+                font-size: 16px;
+            }
+
+
+            .spmb-content li {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+
+            Jl. Raya Tobong, Desa Meri,
+            Kutasari, Purbalingga
+        </div>
+
+
+        <div>
+            <i class="fa-solid fa-phone"></i>
+
+            (0281) 6599204
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+
+        <a href="../index.html" class="brand">
+
+            <div class="brand-logo">
+
+                <img src="../logo-smkn1.png"
+                     alt="Logo SMK Negeri 1 Kutasari">
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <strong>SMK NEGERI 1</strong>
+
+                <span>KUTASARI</span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../index.html#berita"
+               class="active">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+            <a href="../kontak.html">
+                Kontak
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     ARTIKEL SPMB
+========================================= -->
+
+<main class="spmb-page">
+
+    <article class="spmb-container">
+
+
+        <!-- JUDUL -->
+
+        <header class="spmb-header">
+
+            <span class="spmb-category">
+                INFORMASI SEKOLAH
+            </span>
+
+
+            <h1>
+                Mengenal SPMB Jateng 2026:
+                Sistem Baru Penerimaan Murid Baru
+                di Jawa Tengah
+            </h1>
+
+
+            <div class="spmb-meta">
+
+                <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    01 Juni 2026
+                </span>
+
+
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                    SMK Negeri 1 Kutasari
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- FOTO UTAMA -->
+
+        <div class="spmb-main-image">
+
+            <img src="../berita-spmb1.jpg"
+                 alt="SPMB Jateng 2026">
+
+        </div>
+
+
+        <!-- ISI ARTIKEL -->
+
+        <div class="spmb-content">
+
+
+            <p>
+                Pemerintah Provinsi Jawa Tengah melalui
+                Dinas Pendidikan resmi menerapkan sistem
+                penerimaan murid baru dengan nomenklatur
+                baru, yaitu Sistem Penerimaan Murid Baru
+                atau SPMB Jateng 2026.
+            </p>
+
+
+            <p>
+                Sistem ini menjadi bagian penting dalam
+                proses penerimaan murid baru untuk tahun
+                ajaran 2026/2027. Calon murid dan orang tua
+                perlu memahami ketentuan serta tahapan
+                pendaftaran agar dapat mengikuti proses
+                dengan baik.
+            </p>
+
+
+            <h2>
+                Fokus Utama SPMB Jateng 2026
+            </h2>
+
+
+            <p>
+                Salah satu hal yang menjadi perhatian dalam
+                pelaksanaan SPMB Jateng 2026 adalah
+                komitmen terhadap proses penerimaan yang
+                transparan dan objektif.
+            </p>
+
+
+            <div class="spmb-info">
+
+                <strong>
+                    NO TITIP, NO JASTIP!
+                </strong>
+
+                <p>
+                    Proses penerimaan murid baru dilakukan
+                    melalui mekanisme resmi dan sistem yang
+                    telah ditentukan.
+                </p>
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+
+            <div class="spmb-article-image">
+
+                <img src="../spmb-2.jpg"
+                     alt="Informasi SPMB Jateng 2026">
+
+                <div class="spmb-caption">
+                    Informasi SPMB Jateng 2026
+                </div>
+
+            </div>
+
+
+            <h2>
+                Ruang Lingkup SPMB
+            </h2>
+
+
+            <p>
+                SPMB Jateng 2026 mencakup beberapa satuan
+                pendidikan yang berada dalam sistem
+                penerimaan murid baru di Jawa Tengah.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Sekolah Menengah Atas Negeri (SMAN)
+                </li>
+
+                <li>
+                    Sekolah Menengah Kejuruan Negeri (SMKN)
+                </li>
+
+                <li>
+                    Sekolah Luar Biasa Negeri (SLBN)
+                </li>
+
+                <li>
+                    Sekolah swasta kemitraan sesuai
+                    ketentuan yang berlaku
+                </li>
+
+            </ul>
+
+
+            <!-- FOTO 3 -->
+
+            <div class="spmb-article-image">
+
+                <img src="../spmb-3.jpg"
+                     alt="Dokumentasi SPMB Jateng 2026">
+
+                <div class="spmb-caption">
+                    Dokumentasi SPMB Jateng 2026
+                </div>
+
+            </div>
+
+
+            <h2>
+                Jalur Seleksi
+            </h2>
+
+
+            <p>
+                Dalam pelaksanaannya, jalur penerimaan
+                disesuaikan dengan karakteristik satuan
+                pendidikan dan ketentuan yang telah
+                ditetapkan.
+            </p>
+
+
+            <h3>
+                Jalur SMA Negeri
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Jalur Zonasi
+                </li>
+
+                <li>
+                    Jalur Prestasi
+                </li>
+
+                <li>
+                    Jalur Afirmasi
+                </li>
+
+                <li>
+                    Jalur Perpindahan Tugas Orang Tua
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Jalur SMK Negeri
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Kuota Domisili Terdekat
+                </li>
+
+                <li>
+                    Kuota Prestasi / Nilai Rapor
+                </li>
+
+                <li>
+                    Kuota Afirmasi
+                </li>
+
+            </ul>
+
+
+            <!-- FOTO 4 -->
+
+            <div class="spmb-article-image">
+
+                <img src="../spmb-4.jpg"
+                     alt="Informasi Pendaftaran SPMB">
+
+                <div class="spmb-caption">
+                    Informasi dan dokumentasi SPMB
+                </div>
+
+            </div>
+
+
+            <h2>
+                Tahapan yang Perlu Diperhatikan
+            </h2>
+
+
+            <p>
+                Calon murid dan orang tua perlu memperhatikan
+                setiap tahapan penerimaan, mulai dari
+                persiapan dokumen hingga proses pengumuman
+                hasil seleksi.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Verifikasi berkas pendaftaran
+                </li>
+
+                <li>
+                    Penentuan nilai akhir
+                </li>
+
+                <li>
+                    Pengumuman hasil seleksi
+                </li>
+
+                <li>
+                    Proses daftar ulang sesuai ketentuan
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Kesimpulan
+            </h2>
+
+
+            <p>
+                SPMB Jateng 2026 menjadi sistem penting dalam
+                proses penerimaan murid baru di Jawa Tengah.
+                Calon murid diharapkan selalu mengikuti
+                informasi dan ketentuan resmi agar proses
+                pendaftaran dapat berjalan dengan lancar.
+            </p>
+
+
+            <p>
+                SMK Negeri 1 Kutasari turut memberikan
+                informasi kepada masyarakat sebagai bentuk
+                pelayanan informasi pendidikan bagi calon
+                murid dan orang tua.
+            </p>
+
+
+        </div>
+
+
+        <!-- KEMBALI -->
+
+        <div class="spmb-back">
+
+            <a href="../index.html#berita">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kembali ke Berita
+
+            </a>
+
+        </div>
+
+
+    </article>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+
+                <div>
+
+                    <strong>SMK NEGERI 1</strong>
+
+                    <span>KUTASARI</span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                mencetak generasi yang berkarakter,
+                kompeten dan berdaya saing.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Navigasi
+            </h3>
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../index.html#berita">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Kontak Sekolah
+            </h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+
+                Jl. Raya Tobong, Desa Meri,
+                Kec. Kutasari, Purbalingga,
+                Jawa Tengah 53361
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+
+                (0281) 6599204
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-id-card"></i>
+
+                NPSN: 20356186
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <div class="container">
+
+            © 2026 SMK Negeri 1 Kutasari.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

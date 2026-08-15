@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SMKN 1 Kutasari Juara 1 FLS2N Cabang Monolog - SMK Negeri 1 Kutasari</title>
+
+    <link rel="stylesheet" href="../css.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =================================
+           HALAMAN DETAIL BERITA
+        ================================= */
+
+        .article-page {
+            padding: 80px 0;
+            background: #f5f8f6;
+        }
+
+        .article-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+
+        /* =================================
+           HEADER ARTIKEL
+        ================================= */
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .article-date {
+            display: inline-block;
+            color: #008b68;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .article-header h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            color: #063f32;
+            margin-bottom: 20px;
+        }
+
+        .article-header p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =================================
+           FOTO UTAMA
+        ================================= */
+
+        .article-main-image {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .article-main-image img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+
+        /* =================================
+           ISI BERITA
+        ================================= */
+
+        .article-content {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            margin-bottom: 45px;
+        }
+
+        .article-content p {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+        .article-content h2 {
+            color: #064c3b;
+            margin-top: 35px;
+            margin-bottom: 18px;
+        }
+
+
+        /* =================================
+           GALERI FOTO
+        ================================= */
+
+        .article-gallery {
+            margin-top: 45px;
+        }
+
+        .article-gallery h2 {
+            text-align: center;
+            color: #064c3b;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .article-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .article-gallery-item {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .article-gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+
+        /* =================================
+           TOMBOL KEMBALI
+        ================================= */
+
+        .back-news {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .back-news a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 25px;
+            background: #008b68;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-news a:hover {
+            background: #006b51;
+            transform: translateY(-2px);
+        }
+
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 768px) {
+
+            .article-header h1 {
+                font-size: 30px;
+            }
+
+            .article-content {
+                padding: 25px;
+            }
+
+            .article-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-gallery-item img {
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Jl. Raya Tobong, Desa Meri,
+            Kutasari, Purbalingga
+        </div>
+
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            (0281) 6599204
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+
+        <!-- LOGO -->
+
+        <a href="../index.html" class="brand">
+
+            <div class="brand-logo">
+
+                <img src="../logo-smkn1.png"
+                     alt="Logo SMK Negeri 1 Kutasari">
+
+            </div>
+
+            <div class="brand-text">
+
+                <strong>SMK NEGERI 1</strong>
+
+                <span>KUTASARI</span>
+
+            </div>
+
+        </a>
+
+
+        <!-- MENU -->
+
+        <nav class="nav-menu">
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../berita.html">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+            <a href="../kontak.html">
+                Kontak
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     DETAIL BERITA
+========================================= -->
+
+<section class="article-page">
+
+    <div class="article-container">
+
+
+        <!-- JUDUL -->
+
+        <div class="article-header">
+
+            <span class="article-date">
+                24 APRIL 2024
+            </span>
+
+            <h1>
+                SMKN 1 Kutasari Juara 1
+                FLS2N Cabang Monolog
+                Tingkat Kabupaten Purbalingga
+            </h1>
+
+            <p>
+                Prestasi membanggakan SMK Negeri 1 Kutasari
+                dalam Festival Lomba Seni Siswa Nasional
+                (FLS2N) tahun 2024.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             FOTO UTAMA
+        ====================================== -->
+
+        <div class="article-main-image">
+
+            <img src="../fls2n1.jpg"
+                 alt="SMKN 1 Kutasari Juara 1 FLS2N Cabang Monolog">
+
+        </div>
+
+
+        <!-- =====================================
+             ISI BERITA
+        ====================================== -->
+
+        <div class="article-content">
+
+
+            <p>
+                Putri Marila, seorang siswi berbakat dari
+                SMKN 1 Kutasari, telah mengukir prestasi
+                gemilang dengan meraih Juara 1 dalam
+                Festival Lomba Seni Siswa Nasional (FLS2N)
+                Cabang Lomba Monolog tingkat Kabupaten
+                Purbalingga tahun 2024.
+            </p>
+
+
+            <p>
+                Keberhasilan ini tentu tidak lepas dari
+                dedikasi serta kerja keras Putri Marila
+                dalam mempersiapkan dan mempersembahkan
+                penampilan monolog yang memukau.
+            </p>
+
+
+            <h2>
+                Prestasi Membanggakan
+            </h2>
+
+
+            <p>
+                Prestasi yang diraih Putri Marila menjadi
+                sebuah kebanggaan bagi SMK Negeri 1 Kutasari.
+                Keberhasilan tersebut menunjukkan bahwa
+                peserta didik SMK Negeri 1 Kutasari tidak
+                hanya memiliki kemampuan di bidang akademik
+                dan kejuruan, tetapi juga mampu berprestasi
+                dalam bidang seni.
+            </p>
+
+
+            <p>
+                Dalam perjalanan menuju prestasi tersebut,
+                Putri Marila mendapatkan bimbingan dari
+                para pembimbing yang turut memberikan arahan
+                dan dukungan selama proses persiapan.
+            </p>
+
+
+            <h2>
+                Pembimbing
+            </h2>
+
+
+            <p>
+                Putri Marila dibimbing dengan penuh
+                kesabaran dan keahlian oleh:
+            </p>
+
+
+            <p>
+                <strong>
+                    Tri Maretno
+                </strong>
+            </p>
+
+            <p>
+                <strong>
+                    Nur Intan Risana
+                </strong>
+            </p>
+
+
+            <p>
+                Para pembimbing tidak hanya memberikan
+                arahan teknis dalam penyampaian monolog,
+                tetapi juga memberikan dukungan moral
+                sehingga Putri Marila mampu tampil
+                maksimal di atas panggung.
+            </p>
+
+
+            <h2>
+                Inspirasi bagi Siswa
+            </h2>
+
+
+            <p>
+                Prestasi ini menjadi bukti nyata bahwa
+                dengan semangat, kerja keras, latihan,
+                serta dukungan dari para pembimbing,
+                seorang siswa dapat meraih prestasi
+                gemilang di bidang yang diminatinya.
+            </p>
+
+
+            <p>
+                Keberhasilan Putri Marila juga menjadi
+                inspirasi bagi siswa-siswi SMK Negeri 1
+                Kutasari lainnya untuk terus mengembangkan
+                bakat dan minat mereka, khususnya dalam
+                bidang seni.
+            </p>
+
+
+            <p>
+                Semoga prestasi ini dapat menjadi motivasi
+                bagi seluruh siswa SMK Negeri 1 Kutasari
+                untuk terus berkarya, berprestasi,
+                dan mengharumkan nama sekolah.
+            </p>
+
+        </div>
+
+
+        
+
+
+        <!-- =====================================
+             KEMBALI
+        ====================================== -->
+
+        <div class="back-news">
+
+            <a href="../index.html#berita">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kembali ke Berita
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="brand-logo">
+
+                    <i class="fa-solid fa-school"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>SMK NEGERI 1</strong>
+
+                    <span>KUTASARI</span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                mencetak generasi yang berkarakter,
+                kompeten dan berdaya saing.
+            </p>
+
+        </div>
+
+
+        <!-- NAVIGASI -->
+
+        <div class="footer-column">
+
+            <h3>
+                Navigasi
+            </h3>
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../berita.html">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+        </div>
+
+
+        <!-- KONTAK -->
+
+        <div class="footer-column">
+
+            <h3>
+                Kontak Sekolah
+            </h3>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Jl. Raya Tobong, Desa Meri,
+                Kec. Kutasari, Purbalingga,
+                Jawa Tengah 53361
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                (0281) 6599204
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-id-card"></i>
+
+                NPSN: 20356186
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        <div class="container">
+
+            © 2026 SMK Negeri 1 Kutasari.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

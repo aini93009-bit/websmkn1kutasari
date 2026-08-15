@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Galeri | SMK Negeri 1 Kutasari
+    </title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+   <link rel="stylesheet" href="css.css">
+
+</head>
+
+<!-- ZOOM FOTO -->
+<div id="imageModal" class="image-modal" onclick="closeZoom(event)">
+
+    <span class="close-zoom" onclick="closeZoom()">
+        &times;
+    </span>
+
+    <img id="zoomedImage" class="zoomed-image" src="" alt="">
+
+</div>
+
+
+<script>
+
+function openZoom(image) {
+
+    const modal = document.getElementById("imageModal");
+    const zoomedImage = document.getElementById("zoomedImage");
+
+    zoomedImage.src = image.src;
+    zoomedImage.alt = image.alt;
+
+    modal.classList.add("show");
+
+}
+
+
+function closeZoom(event) {
+
+    // Kalau yang diklik adalah fotonya, jangan ditutup
+    if (
+        event &&
+        event.target &&
+        event.target.id === "zoomedImage"
+    ) {
+        return;
+    }
+
+    document.getElementById("imageModal")
+        .classList.remove("show");
+
+}
+
+</script>
+
+<body>
+
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Jl. Raya Tobong, Desa Meri, Kutasari
+        </div>
+
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            (0281) 6599204
+        </div>
+
+    </div>
+
+</div>
+
+
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div class="brand-text">
+                <strong>SMK NEGERI 1</strong>
+                <span>KUTASARI</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html">Beranda</a>
+
+            <a href="profil.html">Profil</a>
+
+            <a href="jurusan.html">Kompetensi</a>
+
+            <a href="berita.html">Berita</a>
+
+            <a href="galeri.html" class="active">
+                Galeri
+            </a>
+
+            <a href="kontak.html">Kontak</a>
+
+        </nav>
+
+
+        <button class="menu-toggle" id="menuToggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span>
+            DOKUMENTASI
+        </span>
+
+        <h1>
+            Galeri Sekolah
+        </h1>
+
+        <p>
+            Dokumentasi kegiatan dan lingkungan sekolah.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                GALERI
+            </span>
+
+            <h2>
+                Dokumentasi Sekolah
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid gallery-large">
+
+           <div class="gallery-box">
+    <img src="gedung.jpg"
+         alt="Gedung SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+    <span>Gedung Sekolah</span>
+</div>
+
+<div class="gallery-box">
+    <img src="kegiatan.jpg"
+         alt="Kegiatan Siswa SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+    <span>Kegiatan Siswa</span>
+</div>
+
+<div class="gallery-box">
+    <img src="pembelajaran.jpeg"
+         alt="Kegiatan Pembelajaran SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+    <span>Kegiatan Pembelajaran</span>
+</div>
+
+
+            <div class="gallery-box">
+
+    <img src="gambar-tsm.jpg"
+         alt="Praktik TBSM SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+
+    <span>
+        Praktik TBSM
+    </span>
+
+</div>
+
+
+           <div class="gallery-box">
+
+    <img src="foto-tkj.jpg"
+         alt="Praktik TKJ SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+
+    <span>
+        Praktik TKJ
+    </span>
+
+</div>
+
+
+            <div class="gallery-box">
+    <img src="gambar-dpib.jpg"
+         alt="Praktik DPIB SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+
+    <span>Praktik DPIB</span>
+</div>
+
+
+           <div class="gallery-box">
+    <img src="gambar-tptu.jpg"
+         alt="Praktik TPTU SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+
+    <span>Praktik TPTU</span>
+</div>
+
+
+            <div class="gallery-box">
+
+    <img src="prestasi.jpg"
+         alt="Prestasi Siswa SMK Negeri 1 Kutasari"
+         onclick="openZoom(this)">
+
+    <span>
+        Prestasi Siswa
+    </span>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <div>
+                    <strong>SMK NEGERI 1</strong>
+                    <span>KUTASARI</span>
+                </div>
+
+            </div>
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                mencetak generasi yang berkarakter,
+                kompeten dan berdaya saing.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Navigasi</h3>
+
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="jurusan.html">Kompetensi</a>
+            <a href="berita.html">Berita</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Kontak</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Jl. Raya Tobong, Desa Meri,
+                Kutasari, Purbalingga
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                (0281) 6599204
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        SMK Negeri 1 Kutasari.
+
+    </div>
+
+</footer>
+
+
+<button id="backTop" class="back-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<script src="js.js"></script>
+
+</body>
+
+</html>
+```

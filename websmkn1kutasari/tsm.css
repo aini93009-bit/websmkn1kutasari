@@ -1,0 +1,1038 @@
+/* ==============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5faf4;
+
+    color: #193d32;
+
+    line-height: 1.7;
+}
+
+.container {
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 0 35px;
+}
+
+
+/* ==============================
+   TOP BAR
+================================ */
+
+.top-bar {
+    background: #064D35;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.top-content {
+    height: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.top-content i {
+    color: #32CD32;
+
+    margin-right: 8px;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    background: white;
+
+    height: 85px;
+
+    border-bottom: 1px solid #DCE8DF;
+}
+
+.nav-content {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    color: #064D35;
+}
+
+.brand img {
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-size: 20px;
+}
+
+.brand-text span {
+    color: #32CD32;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    font-size: 15px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+nav a {
+    color: #333;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    padding: 30px 0;
+
+    position: relative;
+
+    transition: .25s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #07854F;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    height: 3px;
+
+    width: 100%;
+
+    background: #32CD32;
+
+    bottom: 20px;
+
+    left: 0;
+
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   HERO TSM
+================================ */
+
+.hero-tsm {
+
+    background:
+        linear-gradient(
+            120deg,
+            #064D35,
+            #087B4C
+        );
+
+    color: white;
+
+    padding: 75px 0 85px;
+}
+
+.back-link {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    display: inline-flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-bottom: 55px;
+
+    transition: .25s;
+}
+
+.back-link:hover {
+
+    color: #32CD32;
+}
+
+
+.hero-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+.jurusan-logo {
+
+    width: 230px;
+
+    height: 230px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+    flex-shrink: 0;
+}
+
+.jurusan-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.hero-text {
+
+    max-width: 850px;
+}
+
+.small-title {
+
+    display: block;
+
+    color: #32CD32;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.singkatan {
+
+    font-size: 25px;
+
+    color: #32CD32;
+
+    font-weight: 900;
+}
+
+
+/* ==============================
+   CONTENT
+================================ */
+
+.content {
+
+    padding: 85px 0;
+}
+
+
+/* ==============================
+   INTRO
+================================ */
+
+.intro {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.intro h2 {
+
+    font-size: 38px;
+
+    line-height: 1.25;
+
+    color: #064D35;
+}
+
+.line {
+
+    width: 60px;
+
+    height: 5px;
+
+    background: #32CD32;
+
+    border-radius: 10px;
+
+    margin: 25px auto 30px;
+}
+
+.intro p {
+
+    color: #596d66;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   VISI
+================================ */
+
+.info-section {
+
+    margin-top: 80px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
+}
+
+.section-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 15px;
+
+    background: #EFFFF0;
+
+    color: #07854F;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+}
+
+.info-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    color: #064D35;
+}
+
+.info-section p {
+
+    color: #596d66;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   MISI
+================================ */
+
+.misi-section {
+
+    margin-top: 90px;
+}
+
+.misi-section > h2 {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #064D35;
+}
+
+.misi-section .line {
+
+    margin-bottom: 45px;
+}
+
+.misi-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.misi-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    min-height: 180px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+
+    border-top: 4px solid #32CD32;
+
+    transition: .3s;
+}
+
+.misi-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.08);
+}
+
+.misi-card span {
+
+    color: #07854F;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+.misi-card p {
+
+    margin-top: 12px;
+
+    color: #596d66;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   TUJUAN
+================================ */
+
+.tujuan-section {
+
+    margin-top: 100px;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.section-heading h2 {
+
+    font-size: 38px;
+
+    color: #064D35;
+}
+
+.section-heading .line {
+
+    margin-bottom: 45px;
+}
+
+
+.tujuan-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.tujuan-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    min-height: 220px;
+
+    border: 1px solid #DCE8DF;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+
+    transition: .3s;
+}
+
+.tujuan-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #32CD32;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+}
+
+.tujuan-card span {
+
+    display: block;
+
+    color: #32CD32;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+}
+
+.tujuan-card p {
+
+    color: #596d66;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   PROFILE
+================================ */
+
+.profile-section {
+
+    margin-top: 90px;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    background: #EFFFF0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.profile-text {
+
+    max-width: 750px;
+}
+
+.profile-text .small-title {
+
+    color: #07854F;
+}
+
+.profile-text h2 {
+
+    font-size: 35px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    color: #064D35;
+}
+
+.profile-text p {
+
+    color: #596d66;
+
+    font-size: 15px;
+}
+
+
+.profile-box {
+
+    min-width: 230px;
+
+    height: 230px;
+
+    border-radius: 25px;
+
+    background: #32CD32;
+
+    color: #064D35;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.08);
+}
+
+.profile-box i {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.profile-box h3 {
+
+    font-size: 30px;
+
+    color: #064D35;
+}
+
+.profile-box p {
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   KOMPETENSI LULUSAN
+================================ */
+
+.kompetensi-section {
+
+    margin-top: 100px;
+}
+
+.kompetensi-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.kompetensi-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid #DCE8DF;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+
+    transition: .3s;
+}
+
+.kompetensi-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #32CD32;
+}
+
+.kompetensi-card i {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #32CD32;
+
+    color: #064D35;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+.kompetensi-card h3 {
+
+    color: #064D35;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.kompetensi-card p {
+
+    color: #596d66;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+
+    background: #032F21;
+
+    color: white;
+
+    padding: 30px 0;
+
+    text-align: center;
+}
+
+footer p {
+
+    font-size: 14px;
+
+    color: #CFE3D7;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .tujuan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-text h1 {
+
+        font-size: 40px;
+    }
+
+    .misi-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .profile-section {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .kompetensi-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        padding: 0 20px;
+    }
+
+
+    .top-content {
+
+        font-size: 11px;
+    }
+
+    .top-content div:last-child {
+
+        display: none;
+    }
+
+
+    .navbar {
+
+        height: auto;
+
+        padding: 15px 0;
+    }
+
+    .nav-content {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    nav a {
+
+        padding: 5px;
+
+        font-size: 12px;
+    }
+
+    nav a.active::after {
+
+        bottom: -3px;
+    }
+
+
+    .hero-tsm {
+
+        padding: 50px 0;
+    }
+
+
+    .back-link {
+
+        font-size: 14px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .jurusan-logo {
+
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 32px;
+    }
+
+
+    .intro h2 {
+
+        font-size: 30px;
+    }
+
+
+    .intro p {
+
+        font-size: 14px;
+    }
+
+
+    .info-section {
+
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+
+    .misi-section > h2 {
+
+        font-size: 30px;
+    }
+
+
+    .tujuan-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .profile-section {
+
+        padding: 35px 25px;
+    }
+
+
+    .profile-text h2 {
+
+        font-size: 30px;
+    }
+
+
+    .profile-box {
+
+        min-width: 190px;
+
+        width: 190px;
+
+        height: 190px;
+    }
+
+}
+/* ==============================
+   GAMBAR KEGIATAN JURUSAN
+================================ */
+
+.jurusan-image-section {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.jurusan-image-section img {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.jurusan-image-section p {
+    margin-top: 15px;
+    color: #596d66;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .jurusan-image-section img {
+        height: 230px;
+        border-radius: 15px;
+    }
+
+}

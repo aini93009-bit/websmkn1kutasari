@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Kontak | SMK Negeri 1 Kutasari
+    </title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+
+<body>
+
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Jl. Raya Tobong, Desa Meri, Kutasari
+        </div>
+
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            (0281) 6599204
+        </div>
+
+    </div>
+
+</div>
+
+
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div class="brand-text">
+                <strong>SMK NEGERI 1</strong>
+                <span>KUTASARI</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html">Beranda</a>
+
+            <a href="profil.html">Profil</a>
+
+            <a href="jurusan.html">Kompetensi</a>
+
+            <a href="berita.html">Berita</a>
+
+            <a href="galeri.html">Galeri</a>
+
+            <a href="kontak.html" class="active">
+                Kontak
+            </a>
+
+        </nav>
+
+
+        <button class="menu-toggle" id="menuToggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span>
+            INFORMASI KONTAK
+        </span>
+
+        <h1>
+            Hubungi Kami
+        </h1>
+
+        <p>
+            Silakan hubungi SMK Negeri 1 Kutasari
+            melalui informasi berikut.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                KONTAK SEKOLAH
+            </span>
+
+            <h2>
+                Informasi Kontak
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <h3>
+                    Alamat
+                </h3>
+
+                <p>
+                    Jl. Raya Tobong, Desa Meri,
+                    Kecamatan Kutasari,
+                    Kabupaten Purbalingga,
+                    Jawa Tengah 53361.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <h3>
+                    Telepon
+                </h3>
+
+                <p>
+                    (0281) 6599204
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                </div>
+
+                <h3>
+                    NPSN
+                </h3>
+
+                <p>
+                    20356186
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section about">
+
+    <div class="container contact-page-grid">
+
+
+        <!-- MAP -->
+
+        <div class="map-box">
+
+            <iframe
+                src="https://www.google.com/maps?q=SMK%20Negeri%201%20Kutasari%20Purbalingga&output=embed"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="contact-form-box">
+
+            <span class="section-label">
+                KIRIM PESAN
+            </span>
+
+            <h2>
+                Ada Pertanyaan?
+            </h2>
+
+            <p>
+                Silakan isi formulir berikut untuk
+                menyampaikan pertanyaan atau pesan.
+            </p>
+
+
+            <form id="contactForm">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Masukkan nama"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Masukkan email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Pesan
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Tulis pesan..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Kirim Pesan
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        SMK NEGERI 1
+                    </strong>
+
+                    <span>
+                        KUTASARI
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                mencetak generasi yang berkarakter,
+                kompeten dan berdaya saing.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Navigasi
+            </h3>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="profil.html">
+                Profil
+            </a>
+
+            <a href="jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="berita.html">
+                Berita
+            </a>
+
+            <a href="galeri.html">
+                Galeri
+            </a>
+
+            <a href="kontak.html">
+                Kontak
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Kontak
+            </h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Jl. Raya Tobong, Desa Meri,
+                Kutasari, Purbalingga
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                (0281) 6599204
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        SMK Negeri 1 Kutasari.
+
+    </div>
+
+</footer>
+
+
+<button id="backTop" class="back-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<script src="js.js"></script>
+
+</body>
+
+</html>
+```
