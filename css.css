@@ -3011,3 +3011,59 @@ textarea {
     }
 
 }
+
+
+/* =========================================================
+   GALERI BERANDA - FIX
+========================================================= */
+
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100%;
+}
+
+.gallery-grid .gallery-box {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border-radius: 13px !important;
+    background: #eef5f2 !important;
+}
+
+.gallery-grid .gallery-box img {
+    display: block !important;
+    width: 100% !important;
+    height: 230px !important;
+    object-fit: cover !important;
+    border-radius: 13px !important;
+}
+
+.gallery-grid .gallery-box span {
+    display: block !important;
+    text-align: center !important;
+    padding: 10px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: var(--green) !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+
+/* HP */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -1,15 +1,69 @@
-/* ==============================
-   NAVBAR
-================================ */
+/* =========================================================
+   GALERI PREVIEW DI BERANDA
+========================================================= */
 
-.gallery-box img {
+.home-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.home-gallery .gallery-box {
+    min-height: 230px;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+    background: #eef5f2;
+    transition: .3s ease;
+}
+
+.home-gallery .gallery-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.home-gallery .gallery-box img {
     width: 100%;
-    height: 180px;
+    height: 230px;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
-    margin-bottom: 15px;
 }
-.gallery-box {
-    overflow: hidden;
+
+.home-gallery .gallery-box span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+
+    background: rgba(0, 77, 59, .85);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .home-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    .home-gallery {
+        grid-template-columns: 1fr;
+    }
+
 }
