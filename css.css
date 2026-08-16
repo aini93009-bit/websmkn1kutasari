@@ -1,0 +1,3013 @@
+/* =========================================================
+   SMK NEGERI 1 KUTASARI
+   MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --green-dark: #063d2d;
+    --green: #087f5b;
+    --green-light: #0fa875;
+
+    --yellow: #f5b800;
+    --yellow-light: #ffd45a;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --background: #f5f8f6;
+    --text: #59645f;
+    --heading: #17352b;
+
+    --border: #dfe8e3;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, .07);
+
+    --shadow-hover: 0 18px 40px rgba(0, 0, 0, .12);
+
+    --radius: 12px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #193d32;
+    line-height: 1.7;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("gedung.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+
+    background: var(--green-dark);
+
+    color: #dcece6;
+
+    font-size: 11px;
+
+}
+
+
+.top-bar-content {
+
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.top-bar i {
+
+    color: var(--yellow);
+
+    margin-right: 6px;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255,255,255,.97);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.nav-wrapper {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.15;
+
+}
+
+
+.brand-text strong {
+
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.brand-text span {
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   NAV MENU
+========================================================= */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+.nav-menu a {
+
+    position: relative;
+
+    padding: 9px 13px;
+
+    color: #3e4944;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .25s ease;
+
+}
+
+
+.nav-menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 13px;
+
+    right: 13px;
+
+    bottom: 2px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--green);
+
+    transform: scaleX(0);
+
+    transition: .25s ease;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: var(--green);
+
+}
+
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+
+    transform: scaleX(1);
+
+}
+
+
+.nav-menu a.active {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 610px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            115deg,
+            rgba(4,57,42,.98),
+            rgba(8,127,91,.88)
+        );
+
+    color: white;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.04);
+
+    top: -180px;
+
+    right: -100px;
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(245,184,0,.08);
+
+    bottom: -180px;
+
+    left: -100px;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+}
+
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.1);
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    color: #f8d36a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero h1 {
+
+    margin-top: 18px;
+
+    font-size: clamp(38px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    color: #dbece6;
+
+    font-size: 15px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 45px;
+
+    padding: 0 20px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+
+    cursor: pointer;
+
+}
+
+
+.btn-primary {
+
+    background: var(--yellow);
+
+    color: #263018;
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--yellow-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-white {
+
+    background: white;
+
+    color: var(--green-dark);
+
+}
+
+
+.btn-white:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    color: white;
+
+    background: transparent;
+
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: var(--green-dark);
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+
+    padding: 90px 0;
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    color: var(--heading);
+
+    margin-top: 7px;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    line-height: 1.2;
+
+}
+
+
+.section-heading p {
+
+    margin-top: 12px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+    background: white;
+
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.about-card {
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: .3s ease;
+
+}
+
+
+.about-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+.about-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5f4ef;
+
+    color: var(--green);
+
+    font-size: 19px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-card h3 {
+
+    color: var(--heading);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.about-card p {
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   WELCOME / PRINCIPAL
+========================================================= */
+
+.welcome-grid {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================
+   FOTO KEPALA SEKOLAH
+========================================= */
+
+.principal-photo {
+    background: #e8f5f1;
+    border-radius: 25px;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.principal-image {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.principal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+}
+
+.principal-label {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-top: 15px;
+}
+
+.principal-label span {
+    display: block;
+    color: #07835f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.principal-label strong {
+    display: block;
+    color: #173f34;
+    font-size: 20px;
+}
+
+.welcome-text h2 {
+
+    color: var(--heading);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.2;
+
+    margin-top: 8px;
+
+}
+
+
+.welcome-text p {
+
+    font-size: 13px;
+
+    margin-top: 18px;
+
+}
+
+
+.title-line {
+
+    width: 55px;
+
+    height: 4px;
+
+    border-radius: 5px;
+
+    background: var(--yellow);
+
+    margin-top: 18px;
+
+}
+
+
+/* =========================================================
+   SIGAP
+========================================================= */
+
+.sigap-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.sigap-list > div {
+
+    min-height: 150px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+
+.sigap-list > div:hover {
+
+    background: var(--green);
+
+    color: white;
+
+    transform: translateY(-5px);
+
+}
+
+
+.sigap-list strong {
+
+    font-size: 42px;
+
+    color: var(--green);
+
+}
+
+
+.sigap-list > div:hover strong {
+
+    color: var(--yellow);
+
+}
+
+
+.sigap-list span {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   MAJOR / JURUSAN
+========================================================= */
+
+.major-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.major-card {
+
+    position: relative;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s ease;
+
+}
+
+
+.major-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+/* =====================================================
+   LOGO JURUSAN
+===================================================== */
+
+.major-icon {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.major-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.major-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color: #dfe9e4;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+}
+
+
+.major-card h3 {
+
+    margin-top: 22px;
+
+    color: var(--heading);
+
+    font-size: 17px;
+
+    line-height: 1.45;
+
+}
+
+
+.major-card p {
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    color: var(--text);
+
+}
+
+
+.major-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.major-card a:hover {
+
+    color: var(--green-dark);
+
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+.news-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s ease;
+
+}
+
+
+.news-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+.news-image {
+
+    height: 200px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+}
+
+
+.news-green {
+
+    background: #d9eee7;
+
+    color: var(--green);
+
+}
+
+
+.news-blue {
+
+    background: #dfeaf5;
+
+    color: #3c6f9e;
+
+}
+
+
+.news-orange {
+
+    background: #f9ead0;
+
+    color: #b57a13;
+
+}
+
+
+.news-body {
+
+    padding: 23px;
+
+}
+
+
+.news-date {
+
+    font-size: 9px;
+
+    color: var(--green);
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.news-body h3 {
+
+    margin-top: 7px;
+
+    color: var(--heading);
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+}
+
+
+.news-body p {
+
+    margin-top: 9px;
+
+    font-size: 12px;
+
+}
+
+
+.news-body a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.gallery-box {
+
+    min-height: 200px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dceee8,
+            #eef5f2
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+    overflow: hidden;
+
+    position: relative;
+
+    transition: .3s ease;
+
+}
+
+
+.gallery-box:hover {
+
+    transform: scale(1.02);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+.gallery-box i {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.gallery-box span {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   LARGE GALLERY
+========================================================= */
+
+.gallery-large {
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+}
+
+
+.gallery-large .gallery-box {
+
+    min-height: 230px;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.contact-cta {
+
+    padding: 65px 0;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            var(--green-dark),
+            var(--green)
+        );
+
+    color: white;
+
+}
+
+
+.contact-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.contact-content > div {
+
+    max-width: 700px;
+
+}
+
+
+.contact-content span {
+
+    color: var(--yellow);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.contact-content h2 {
+
+    margin-top: 7px;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-page-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr .85fr;
+
+    gap: 35px;
+
+    align-items: stretch;
+
+}
+
+
+.map-box {
+
+    min-height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #e9efec;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.map-box iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 450px;
+
+    display: block;
+
+}
+
+
+.contact-form-box {
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.contact-form-box h2 {
+
+    margin-top: 6px;
+
+    color: var(--heading);
+
+    font-size: 28px;
+
+}
+
+
+.contact-form-box > p {
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 17px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--heading);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: #fbfdfc;
+
+    outline: none;
+
+    font-size: 12px;
+
+    transition: .25s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: var(--green);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(8,127,91,.08);
+
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+
+    padding: 90px 0;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            var(--green-dark),
+            var(--green)
+        );
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.page-hero span {
+
+    color: var(--yellow);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.page-hero h1 {
+
+    margin: 8px 0;
+
+    font-size: clamp(35px, 5vw, 48px);
+
+    line-height: 1.2;
+
+}
+
+
+.page-hero p {
+
+    color: #d9eee7;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background: #082c22;
+
+    color: #c8d8d2;
+
+    padding-top: 65px;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr .7fr 1fr;
+
+    gap: 55px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer-brand .brand-logo {
+
+    background: var(--green);
+
+}
+
+
+.footer-brand strong,
+.footer-brand span {
+
+    display: block;
+
+}
+
+
+.footer-brand strong {
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+.footer-brand span {
+
+    color: var(--yellow);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-about p {
+
+    max-width: 400px;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.footer-column h3 {
+
+    color: white;
+
+    font-size: 14px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.footer-column a {
+
+    font-size: 11px;
+
+    margin-bottom: 8px;
+
+    transition: .2s;
+
+}
+
+
+.footer-column a:hover {
+
+    color: var(--yellow);
+
+    transform: translateX(3px);
+
+}
+
+
+.footer-column p {
+
+    font-size: 11px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-column i {
+
+    color: var(--yellow);
+
+    width: 18px;
+
+}
+
+
+.copyright {
+
+    padding: 18px 5%;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #9bb1a9;
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: .3s;
+
+    z-index: 999;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.back-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.back-top:hover {
+
+    background: var(--green-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.hero-content {
+
+    animation:
+        fadeUp .8s ease both;
+
+}
+
+
+.about-card,
+.major-card,
+.news-card,
+.gallery-box {
+
+    animation:
+        fadeUp .7s ease both;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+
+        gap: 0;
+
+    }
+
+
+    .nav-menu a {
+
+        padding: 8px 9px;
+
+        font-size: 11px;
+
+    }
+
+
+    .about-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .major-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .sigap-list {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .welcome-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .top-bar-content {
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 8px 0;
+
+    }
+
+
+    .top-bar-content div:last-child {
+
+        display: none;
+
+    }
+
+
+    .nav-wrapper {
+
+        min-height: 68px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        left: 0;
+
+        right: 0;
+
+        top: 68px;
+
+        background: white;
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 10px 5% 15px;
+
+    }
+
+
+    .nav-menu.show {
+
+        display: flex;
+
+    }
+
+
+    .nav-menu a {
+
+        padding: 12px 5px;
+
+    }
+
+
+    .nav-menu a::after {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 560px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .about-grid,
+    .major-grid,
+    .news-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gallery-large {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gallery-large .gallery-box {
+
+        min-height: 180px;
+
+    }
+
+
+    .welcome-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .principal-photo {
+
+        min-height: 330px;
+
+    }
+
+
+    .sigap-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .contact-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .contact-page-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .map-box {
+
+        min-height: 350px;
+
+    }
+
+
+    .map-box iframe {
+
+        min-height: 350px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .brand-text strong {
+
+        font-size: 13px;
+
+    }
+
+
+    .brand-text span {
+
+        font-size: 9px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .hero {
+
+        min-height: 530px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-buttons {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .gallery-grid,
+    .gallery-large {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-box,
+    .gallery-large .gallery-box {
+
+        min-height: 210px;
+
+    }
+
+
+    .sigap-list {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .sigap-list > div {
+
+        min-height: 125px;
+
+    }
+
+
+    .contact-form-box {
+
+        padding: 25px;
+
+    }
+
+
+    .page-hero {
+
+        padding: 65px 0;
+
+    }
+
+
+    .page-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .back-top {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+}
+/* =====================================================
+   HALAMAN DETAIL JURUSAN
+===================================================== */
+
+.major-detail-hero {
+    background: linear-gradient(135deg, #004d3b, #087f62);
+    padding: 70px 0;
+    color: white;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 45px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: #ffc400;
+}
+
+.major-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.major-detail-logo {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.major-detail-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.major-detail-header h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 12px 0;
+}
+
+.major-detail-header p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffc400;
+}
+
+
+/* DESKRIPSI */
+
+.major-intro {
+    max-width: 950px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.major-intro h2 {
+    font-size: 36px;
+    color: #123d32;
+}
+
+.major-intro p {
+    color: #5f6f6a;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+
+/* VISI MISI */
+
+.major-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.major-info-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+}
+
+.major-info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #e4f5ef;
+    color: #008c68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.major-info-card h3 {
+    font-size: 28px;
+    color: #123d32;
+}
+
+.major-info-card p,
+.major-info-card li {
+    color: #5f6f6a;
+    line-height: 1.8;
+}
+
+.major-info-card ol {
+    padding-left: 20px;
+}
+
+
+/* KOMPETENSI */
+
+.major-list-section {
+    margin-bottom: 80px;
+}
+
+.major-list-section h2 {
+    font-size: 36px;
+    color: #123d32;
+    margin: 10px 0;
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.competency-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.competency-item span {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #008c68;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.competency-item p {
+    margin: 8px 0;
+    color: #435650;
+    line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .major-detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .major-detail-header h1 {
+        font-size: 34px;
+    }
+
+    .major-info-grid,
+    .competency-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .major-detail-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+}
+
+/* ==============================
+   GAMBAR KEGIATAN DPIB
+================================ */
+
+.jurusan-image-section {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.jurusan-image-section img {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.jurusan-image-section p {
+    margin-top: 15px;
+
+    color: #596d66;
+
+    font-size: 14px;
+    font-style: italic;
+}
+/* =========================
+   ZOOM FOTO GALERI
+========================= */
+
+.gallery-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Background zoom */
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 9999;
+}
+
+
+/* Saat dibuka */
+
+.image-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Foto yang diperbesar */
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    cursor: zoom-out;
+}
+
+
+/* Tombol X */
+
+.close-zoom {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 45px;
+    color: white;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    z-index: 10000;
+}
+
+.close-zoom:hover {
+    color: #00a878;
+}
+
+.major-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: block;
+}
+
+.major-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.major-icon {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.major-icon img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.major-title {
+    flex: 1;
+}
+
+.major-title .major-number {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.major-title h3 {
+    margin: 0;
+    text-align: left;
+}
+
+
+/* FOTO DI BAWAH */
+
+.major-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVE UNTUK HP
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTAINER */
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* TOP BAR */
+    .top-bar-content {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+    /* NAVBAR */
+    .nav-wrapper {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 15px 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+
+    /* INFO CEPAT */
+    .quick-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+
+    /* SAMBUTAN */
+    .welcome-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+
+    /* PROFIL */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* JURUSAN */
+    .major-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .major-header {
+        gap: 15px;
+    }
+
+    .major-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .major-icon img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .major-title h3 {
+        font-size: 19px;
+    }
+
+    .major-image {
+        height: 200px;
+    }
+
+
+    /* STATISTIK */
+    .statistics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    /* BERITA */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card img {
+        width: 100%;
+    }
+
+
+    /* GALERI */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-box img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* KONTAK */
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+
+    /* FOOTER */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* =====================
+       TOP BAR
+    ===================== */
+
+    .top-bar-content {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+    /* =====================
+       NAVBAR
+    ===================== */
+
+    .nav-wrapper {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 15px 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        z-index: 9999;
+    }
+
+    /* INI HARUS .show karena js.js kamu memakai .show */
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 5px;
+        width: 100%;
+    }
+
+
+    /* =====================
+       HERO
+    ===================== */
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* =====================
+       INFO CEPAT
+    ===================== */
+
+    .quick-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+
+    /* =====================
+       SAMBUTAN
+    ===================== */
+
+    .welcome-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+
+    /* =====================
+       PROFIL
+    ===================== */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================
+       JURUSAN
+    ===================== */
+
+    .major-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .major-header {
+        gap: 15px;
+    }
+
+    .major-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .major-icon img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .major-title h3 {
+        font-size: 19px;
+    }
+
+    .major-image {
+        height: 200px;
+    }
+
+
+    /* =====================
+       STATISTIK
+    ===================== */
+
+    .statistics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    /* =====================
+       BERITA
+    ===================== */
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================
+       GALERI
+    ===================== */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================
+       KONTAK
+    ===================== */
+
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+
+    /* =====================
+       FOOTER
+    ===================== */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}

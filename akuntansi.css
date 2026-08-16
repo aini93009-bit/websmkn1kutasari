@@ -1,0 +1,1507 @@
+/* =====================================================
+   ROOT / WARNA UTAMA
+===================================================== */
+
+:root {
+
+    --lime: #32CD32;
+    --lime-dark: #228B22;
+    --lime-light: #EFFFF0;
+
+    --green-dark: #064D35;
+    --green-medium: #07854F;
+
+    --white: #ffffff;
+
+    --background: #F6FAF5;
+
+    --text: #18382D;
+
+    --muted: #64756D;
+
+    --border: #DCE8DF;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.06);
+}
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.7;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 0 35px;
+}
+
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+
+    background:
+        var(--green-dark);
+
+    color: white;
+
+    font-size: 13px;
+}
+
+
+.top-content {
+
+    min-height: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.top-content i {
+
+    color: var(--lime);
+
+    margin-right: 8px;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    background: white;
+
+    min-height: 85px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.nav-content {
+
+    min-height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    color: var(--green-dark);
+}
+
+
+.brand img {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+
+.brand-text strong {
+
+    font-size: 20px;
+}
+
+
+.brand-text span {
+
+    color:
+        var(--green-medium);
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    font-size: 14px;
+}
+
+
+
+/* NAV MENU */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+nav a {
+
+    position: relative;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    padding: 30px 0;
+
+    transition: .25s;
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color:
+        var(--green-medium);
+}
+
+
+nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 20px;
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        var(--lime);
+
+    border-radius: 5px;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-akuntansi {
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #064D35,
+            #087B4C
+        );
+
+    color: white;
+
+    padding:
+        75px 0
+        85px;
+}
+
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    margin-bottom: 55px;
+
+    transition: .25s;
+}
+
+
+.back-link:hover {
+
+    color:
+        var(--lime);
+}
+
+
+.hero-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+.jurusan-logo {
+
+    width: 230px;
+
+    height: 230px;
+
+    flex-shrink: 0;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+}
+
+
+.jurusan-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.hero-text {
+
+    max-width: 850px;
+}
+
+
+.small-title {
+
+    display: block;
+
+    color:
+        var(--lime);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.hero-text h1 {
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.singkatan {
+
+    display: inline-block;
+
+    color:
+        var(--lime);
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+    padding:
+        85px 0;
+}
+
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-label {
+
+    display: block;
+
+    color:
+        var(--green-medium);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.intro h2 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 40px;
+
+    line-height: 1.2;
+}
+
+
+.line {
+
+    width: 60px;
+
+    height: 5px;
+
+    background:
+        var(--lime);
+
+    border-radius: 10px;
+
+    margin:
+        22px auto 30px;
+}
+
+
+.intro p {
+
+    color:
+        var(--muted);
+
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   QUICK INFO
+===================================================== */
+
+.quick-info {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.quick-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    transition: .3s;
+}
+
+
+.quick-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--lime);
+}
+
+
+.quick-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background:
+        var(--lime-light);
+
+    color:
+        var(--green-medium);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+
+.quick-card span {
+
+    display: block;
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.quick-card strong {
+
+    display: block;
+
+    color:
+        var(--green-dark);
+
+    font-size: 14px;
+
+    margin-top: 3px;
+}
+
+
+
+/* =====================================================
+   VISI
+===================================================== */
+
+.info-section {
+
+    margin-top: 80px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    box-shadow:
+        var(--shadow);
+
+    border:
+        1px solid var(--border);
+}
+
+
+.section-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background:
+        var(--lime-light);
+
+    color:
+        var(--green-medium);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+}
+
+
+.info-section h2 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.info-section p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+
+
+/* =====================================================
+   MISI
+===================================================== */
+
+.misi-section {
+
+    margin-top: 90px;
+}
+
+
+.misi-section > .section-label {
+
+    text-align: center;
+}
+
+
+.misi-section > h2 {
+
+    text-align: center;
+
+    color:
+        var(--green-dark);
+
+    font-size: 38px;
+}
+
+
+.misi-section .line {
+
+    margin-bottom: 45px;
+}
+
+
+.misi-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.misi-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    min-height: 200px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    transition: .3s;
+}
+
+
+.misi-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--lime);
+}
+
+
+.misi-card span {
+
+    color:
+        var(--lime);
+
+    background:
+        var(--green-dark);
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+
+.misi-card h3 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.misi-card p {
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   TUJUAN
+===================================================== */
+
+.tujuan-section {
+
+    margin-top: 100px;
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 45px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+
+.section-heading p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+
+.tujuan-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.tujuan-card {
+
+    position: relative;
+
+    background: white;
+
+    padding: 30px;
+
+    min-height: 200px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    transition: .3s;
+
+    overflow: hidden;
+}
+
+
+.tujuan-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--lime);
+}
+
+
+.tujuan-card span {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    color:
+        #DCE8DF;
+
+    font-size: 35px;
+
+    font-weight: 900;
+}
+
+
+.tujuan-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   KOMPETENSI
+===================================================== */
+
+.kompetensi-section {
+
+    margin-top: 100px;
+}
+
+
+.kompetensi-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.kompetensi-card {
+
+    position: relative;
+
+    background: white;
+
+    padding: 25px;
+
+    min-height: 210px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    transition: .3s;
+}
+
+
+.kompetensi-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--lime);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+}
+
+
+.kompetensi-card > span {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 15px;
+
+    color:
+        #DCE8DF;
+
+    font-size: 20px;
+
+    font-weight: 900;
+}
+
+
+.kompetensi-card i {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--lime-light);
+
+    color:
+        var(--green-medium);
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.kompetensi-card p {
+
+    color:
+        var(--green-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+
+/* =====================================================
+   PROFIL
+===================================================== */
+
+.profile-section {
+
+    margin-top: 100px;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EFFFF0,
+            #DFF3EC
+        );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.profile-text {
+
+    max-width: 750px;
+}
+
+
+.profile-text h2 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+}
+
+
+.profile-text p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+
+.profile-box {
+
+    min-width: 240px;
+
+    height: 240px;
+
+    border-radius: 25px;
+
+    background:
+        var(--green-dark);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+}
+
+
+.profile-box i {
+
+    font-size: 55px;
+
+    color:
+        var(--lime);
+
+    margin-bottom: 15px;
+}
+
+
+.profile-box h3 {
+
+    font-size: 24px;
+
+    color:
+        white;
+
+    text-align: center;
+}
+
+
+.profile-box p {
+
+    color:
+        #D7E8DF;
+
+    font-size: 12px;
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #032F21;
+
+    color: white;
+
+    padding:
+        45px 0 0;
+}
+
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 35px;
+}
+
+
+.footer-content strong {
+
+    color:
+        var(--lime);
+
+    font-size: 16px;
+}
+
+
+.footer-content p {
+
+    color:
+        #C6D6CE;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+.footer-content i {
+
+    color:
+        var(--lime);
+
+    margin-right: 7px;
+}
+
+
+.copyright {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    padding:
+        18px 0;
+
+    color:
+        #9EB2A8;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    nav {
+
+        gap: 18px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 45px;
+    }
+
+
+    .kompetensi-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .tujuan-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .container {
+
+        padding:
+            0 25px;
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .hero-text {
+
+        max-width: 700px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 40px;
+    }
+
+
+    .quick-info {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .kompetensi-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .profile-section {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .container {
+
+        padding:
+            0 20px;
+    }
+
+
+    .top-content {
+
+        justify-content: center;
+
+        font-size: 11px;
+    }
+
+
+    .top-content div:last-child {
+
+        display: none;
+    }
+
+
+    .navbar {
+
+        min-height: auto;
+
+        padding:
+            15px 0;
+    }
+
+
+    .nav-content {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    nav a {
+
+        padding: 5px;
+
+        font-size: 12px;
+    }
+
+
+    nav a.active::after {
+
+        bottom: -4px;
+    }
+
+
+    .hero-akuntansi {
+
+        padding:
+            50px 0;
+    }
+
+
+    .back-link {
+
+        margin-bottom: 35px;
+
+        font-size: 13px;
+    }
+
+
+    .jurusan-logo {
+
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 32px;
+    }
+
+
+    .intro h2 {
+
+        font-size: 30px;
+    }
+
+
+    .info-section {
+
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+
+    .misi-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .tujuan-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .kompetensi-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .profile-section {
+
+        padding:
+            35px 25px;
+    }
+
+
+    .profile-box {
+
+        min-width: 200px;
+
+        width: 200px;
+
+        height: 200px;
+    }
+
+}
+
+
+
+@media (max-width: 450px) {
+
+    .hero-text h1 {
+
+        font-size: 28px;
+    }
+
+
+    .intro h2 {
+
+        font-size: 27px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .profile-text h2 {
+
+        font-size: 30px;
+    }
+
+
+    .quick-card {
+
+        padding: 20px;
+    }
+
+}
+/* ==============================
+   GAMBAR JURUSAN
+================================ */
+
+.jurusan-image {
+    width: 100%;
+    max-width: 1100px;
+    height: 430px;
+    margin: 70px auto 0;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    background: white;
+}
+
+.jurusan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

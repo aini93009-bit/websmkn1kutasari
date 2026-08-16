@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>In House Training SMKN 1 Kutasari</title>
+
+    <link rel="stylesheet" href="../css.css">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* ================================
+           HALAMAN DETAIL BERITA
+        ================================= */
+
+        .article-page {
+            padding: 80px 0;
+            background: #f5f8f6;
+        }
+
+        .article-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .article-date {
+            display: inline-block;
+            color: #008b68;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .article-header h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            color: #063f32;
+            margin-bottom: 20px;
+        }
+
+        .article-header p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ================================
+           FOTO UTAMA
+        ================================= */
+
+        .article-main-image {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .article-main-image img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+
+        /* ================================
+           ISI BERITA
+        ================================= */
+
+        .article-content {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            margin-bottom: 45px;
+        }
+
+        .article-content p {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+        .article-content h2 {
+            color: #064c3b;
+            margin-top: 35px;
+            margin-bottom: 18px;
+        }
+
+        .article-content h3 {
+            color: #064c3b;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .article-content ul {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+
+
+        /* ================================
+           GALERI
+        ================================= */
+
+        .article-gallery {
+            margin-top: 45px;
+        }
+
+        .article-gallery h2 {
+            text-align: center;
+            color: #064c3b;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .article-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .article-gallery-item {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .article-gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+
+        /* ================================
+           TOMBOL KEMBALI
+        ================================= */
+
+        .back-news {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .back-news a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 25px;
+            background: #008b68;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-news a:hover {
+            background: #006b51;
+            transform: translateY(-2px);
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 768px) {
+
+            .article-header h1 {
+                font-size: 30px;
+            }
+
+            .article-content {
+                padding: 25px;
+            }
+
+            .article-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-gallery-item img {
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Jl. Raya Tobong, Desa Meri,
+            Kutasari, Purbalingga
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-phone"></i>
+
+            (0281) 6599204
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+
+        <!-- LOGO -->
+
+        <a href="../index.html" class="brand">
+
+            <div class="brand-logo">
+
+                <img src="../logo-smkn1.png"
+                     alt="Logo SMK Negeri 1 Kutasari">
+
+            </div>
+
+            <div class="brand-text">
+
+                <strong>SMK NEGERI 1</strong>
+
+                <span>KUTASARI</span>
+
+            </div>
+
+        </a>
+
+
+        <!-- MENU -->
+
+        <nav class="nav-menu">
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../berita.html">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+            <a href="../kontak.html">
+                Kontak
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     DETAIL BERITA
+===================================================== -->
+
+<section class="article-page">
+
+    <div class="article-container">
+
+
+        <!-- JUDUL -->
+
+        <div class="article-header">
+
+            <span class="article-date">
+                26 SEPTEMBER 2025
+            </span>
+
+            <h1>
+                SMK Negeri 1 Kutasari Selenggarakan
+                In House Training Penyusunan
+                Perencanaan Pembelajaran Mendalam
+            </h1>
+
+            <p>
+                Kegiatan peningkatan kompetensi guru dan
+                karyawan SMK Negeri 1 Kutasari.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             FOTO UTAMA
+        ================================================== -->
+
+        <img src="file:///C:/Users/Hype%20AMD/Downloads/websmkn1kutasari/inhouse1.jpg"
+     alt="In House Training SMK Negeri 1 Kutasari"
+     style="width:100%; max-height:600px; object-fit:cover; border-radius:18px; display:block;">
+
+
+        <!-- =================================================
+             ISI BERITA
+        ================================================== -->
+
+        <div class="article-content">
+
+            <p>
+                Kutasari, 24–25 September 2025 – SMK Negeri 1
+                Kutasari menyelenggarakan kegiatan In House
+                Training (IHT) Penyusunan Perencanaan
+                Pembelajaran Mendalam yang berlangsung selama
+                dua hari di Aula SMK Negeri 1 Kutasari.
+            </p>
+
+            <p>
+                Kegiatan ini diikuti oleh 96 guru dan karyawan
+                dengan menghadirkan narasumber Widiyanto, S.T.,
+                M.T., Widyaiswara Ahli Madya dari Balai Besar
+                Pengembangan Penjaminan Mutu Pendidikan Vokasi
+                (BBPPMPV) Bidang Mesin dan Teknik Industri.
+            </p>
+
+
+            <h2>
+                Tujuan Kegiatan
+            </h2>
+
+            <p>
+                Kegiatan ini merupakan langkah nyata sekolah
+                dalam menyukseskan program pemerintah melalui
+                bantuan SMK PK Skema Pembelajaran Mendalam.
+                Melalui pelatihan ini, para pendidik diharapkan
+                dapat meningkatkan kompetensinya dalam menyusun
+                perangkat pembelajaran yang berorientasi pada
+                pembelajaran mendalam.
+            </p>
+
+
+            <h2>
+                Rangkaian Kegiatan
+            </h2>
+
+            <p>
+                In House Training dilaksanakan selama dua hari
+                dengan agenda yang terstruktur dan berkesinambungan.
+            </p>
+
+
+            <h3>
+                Hari Pertama – Rabu, 24 September 2025
+            </h3>
+
+            <p>
+                Acara dimulai pukul 07.30 dengan registrasi peserta
+                dan dilanjutkan dengan pembukaan resmi oleh Kepala
+                SMK Negeri 1 Kutasari.
+            </p>
+
+            <p>
+                Peserta kemudian mendapatkan beberapa materi,
+                yaitu:
+            </p>
+
+            <ul>
+
+                <li>
+                    Pola Pikir Bertumbuh
+                </li>
+
+                <li>
+                    Dimensi Profil Lulusan
+                </li>
+
+                <li>
+                    Prinsip Pembelajaran Mendalam
+                </li>
+
+                <li>
+                    Pengalaman Belajar
+                </li>
+
+            </ul>
+
+            <p>
+                Hari pertama ditutup dengan refleksi bersama
+                antara peserta dan narasumber.
+            </p>
+
+
+            <h3>
+                Hari Kedua – Kamis, 25 September 2025
+            </h3>
+
+            <p>
+                Hari kedua diawali dengan materi Kerangka
+                Pembelajaran yang membahas rancangan sistematis
+                penyusunan perangkat ajar.
+            </p>
+
+            <p>
+                Selanjutnya peserta mengikuti materi Asesmen
+                Pembelajaran Mendalam serta praktik pembuatan
+                Rencana Pembelajaran Mendalam sesuai bidang
+                keahlian masing-masing dengan bimbingan narasumber.
+            </p>
+
+            <p>
+                Kegiatan ditutup dengan refleksi, evaluasi,
+                dan penyerahan hasil kerja peserta.
+            </p>
+
+
+            <h2>
+                Harapan Ke Depan
+            </h2>
+
+            <p>
+                Dengan adanya kegiatan IHT ini, SMK Negeri 1
+                Kutasari berharap seluruh guru mampu
+                mengimplementasikan pembelajaran mendalam
+                di kelas sehingga dapat mencetak lulusan yang
+                lebih siap menghadapi tantangan dunia kerja
+                dan dunia industri.
+            </p>
+
+            <p>
+                Kegiatan berjalan lancar dan penuh antusiasme.
+                Partisipasi aktif para guru dalam setiap sesi
+                menjadi bukti komitmen SMK Negeri 1 Kutasari
+                untuk terus berinovasi dalam meningkatkan mutu
+                pendidikan.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             GALERI FOTO
+        ================================================== -->
+
+        <div class="article-gallery-item">
+    <img src="../inhouse1.jpg"
+     alt="Dokumentasi In House Training">
+</div>
+
+<div class="article-gallery-item">
+    <img src="../inhouse-2.jpg"
+     alt="Dokumentasi In House Training">
+</div>
+
+<div class="article-gallery-item">
+    <img src="../inhouse-3.jpg"
+     alt="Dokumentasi In House Training">
+</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             KEMBALI
+        ================================================== -->
+
+        <div class="back-news">
+
+            <a href="../index.html#berita">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kembali ke Berita
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-about">
+
+            <div class="footer-brand">
+
+                <div class="brand-logo">
+
+                    <i class="fa-solid fa-school"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>SMK NEGERI 1</strong>
+
+                    <span>KUTASARI</span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                mencetak generasi yang berkarakter,
+                kompeten dan berdaya saing.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Navigasi
+            </h3>
+
+            <a href="../index.html#home">
+                Beranda
+            </a>
+
+            <a href="../profil.html">
+                Profil
+            </a>
+
+            <a href="../jurusan.html">
+                Kompetensi
+            </a>
+
+            <a href="../berita.html">
+                Berita
+            </a>
+
+            <a href="../galeri.html">
+                Galeri
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Kontak Sekolah
+            </h3>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Jl. Raya Tobong, Desa Meri,
+                Kec. Kutasari, Purbalingga,
+                Jawa Tengah 53361
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                (0281) 6599204
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-id-card"></i>
+
+                NPSN: 20356186
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        <div class="container">
+
+            © 2026 SMK Negeri 1 Kutasari.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
